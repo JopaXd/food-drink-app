@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AreaComponent } from './area/area.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,10 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
-  providers: [],
+  providers: [ Title ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
