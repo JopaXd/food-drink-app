@@ -12,6 +12,8 @@ import { AreaComponent } from './area/area.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [ Title ],
   bootstrap: [AppComponent]

@@ -1,1 +1,13 @@
-<p>categories works!</p>
+<div class="text-center mt-5">
+	<h1>Categories</h1>
+	<div class="spacer"></div>
+	<div class="category" *ngIf="categories">
+		<div class="categoryContainer" *ngFor="let category of categories">
+			<img src="{{ category.strCategoryThumb }}" class="image">
+			<div class="overlay">
+			</div>
+			<div class="text"><a href="#" class="h2 text-light">{{ category.strCategory }}</a></div>
+			<div class="inline-spacer"></div>
+		</div>
+	</div>
+</div>

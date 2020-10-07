@@ -9,15 +9,16 @@ import { CategoriesService } from '../categories.service'
 })
 export class CategoriesComponent implements OnInit {
 
-  categories:Object;
+  categories;
 
-  constructor(private _titleSvc:TitleService, private _ctgSvc:CategoriesService) { }
+  constructor(private _titleSvc:TitleService, private _categoriesSvc:CategoriesService) { }
 
   ngOnInit(): void {
   	this._titleSvc.setTitle("Food & Drink - Categories");
-  	// this._categories.getAllCategories().subscribe(data => {
-  	// 	this.categories = data;
-  	// })
+  	this._categoriesSvc.getAllCategories().subscribe(data => {
+  		this.categories = data["categories"];
+  		console.log(this.categories[0]["strCategoryThumb"])
+  	})
   }
 
 }
