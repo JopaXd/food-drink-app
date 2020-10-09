@@ -1,1 +1,10 @@
-<p>area works!</p>
+<div class="areaContent mt-5">
+	<h1 class="text-center">Browse By Area</h1>
+	<div class="spacer"></div>
+	<div class="areaItemsContainer">
+		<div class="areaItem" *ngFor="let country of countriesList">
+			<img class="countryFlag" src="https://www.countryflags.io/{{ country.country_code }}/shiny/64.png"/>
+			<a class="countryName h4 text-body">{{ country.Nationality }}</a>
+		</div>
+	</div>
+</div>

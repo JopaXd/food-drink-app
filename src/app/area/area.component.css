@@ -1,0 +1,41 @@
+.areaItem{
+	display: inline-block;
+	width:30%;
+}
+
+.areaItemsContainer{
+	margin-left: 30%;
+}
+
+@media only screen and (min-width: 1200px) {
+	.areaItemsContainer{
+		margin-left: 22% !important;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.areaItemsContainer{
+		margin-left: 14%;
+	}
+} 
+
+@media only screen and (max-width: 375px) {
+	.areaItemsContainer{
+		margin-left: 7%;
+	}
+} 
+
+@media only screen and (min-width: 768px) {
+	.areaItemsContainer{
+		margin-left: 14%;
+	}
+} 
+
+.countryName{
+	position: relative;
+	top:5px;
+}
+
+.spacer{
+	height: 10vh;
+}
