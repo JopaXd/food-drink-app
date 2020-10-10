@@ -13,10 +13,10 @@ export class HomeComponent implements OnInit {
   faPizzaSlice = faPizzaSlice;
   faHamburger = faHamburger;
 
-  constructor(private _title:TitleService) { }
+  constructor(private _titleSvc:TitleService) { }
 
   ngOnInit(): void {
-  	this._title.setTitle("Food & Drink - Home");
+  	this._titleSvc.setTitle("Food & Drink - Home");
   	this.year = new Date().getFullYear().toString();
   }
 

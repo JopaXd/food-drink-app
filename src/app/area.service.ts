@@ -11,4 +11,8 @@ export class AreaService {
   getAllAreas(){
   	return this.http.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
   }
+
+  getMealsByArea(area){
+  	return this.http.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`);
+  }
 }

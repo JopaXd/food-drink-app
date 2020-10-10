@@ -12,7 +12,8 @@ import { AreasComponent } from './areas/areas.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HttpClientModule } from '@angular/common/http';
-import { CategoryComponent } from './category/category.component'
+import { CategoryComponent } from './category/category.component';
+import { AreaComponent } from './area/area.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CategoryComponent } from './category/category.component'
     FooterComponent,
     CategoriesComponent,
     AreasComponent,
-    CategoryComponent
+    CategoryComponent,
+    AreaComponent
   ],
   imports: [
     BrowserModule,

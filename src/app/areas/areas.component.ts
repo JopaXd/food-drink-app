@@ -137,10 +137,10 @@ export class AreasComponent implements OnInit {
 ]
    
   countriesList:Array<any> = [];
-  constructor(private _title:TitleService, private _areaSvc:AreaService) { }
+  constructor(private _titleSvc:TitleService, private _areaSvc:AreaService) { }
 
   ngOnInit(): void {
-  	this._title.setTitle("Food & Drink - Area");
+  	this._titleSvc.setTitle("Food & Drink - Area");
   	this._areaSvc.getAllAreas().subscribe(data => {
   		let countries = data["meals"];
   		countries.forEach((country:any) => {
