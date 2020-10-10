@@ -12,4 +12,8 @@ export class CategoriesService {
   	return this.http.get("https://www.themealdb.com/api/json/v1/1/categories.php");
   }
 
+  getMealsByCategory(category){
+  	return this.http.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+  }
+
 }

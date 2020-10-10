@@ -8,11 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { AreaComponent } from './area/area.component';
-import { IngredientsComponent } from './ingredients/ingredients.component';
+import { AreasComponent } from './areas/areas.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryComponent } from './category/category.component'
 
 @NgModule({
   declarations: [
@@ -21,8 +21,8 @@ import { HttpClientModule } from '@angular/common/http'
     NavbarComponent,
     FooterComponent,
     CategoriesComponent,
-    AreaComponent,
-    IngredientsComponent
+    AreasComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

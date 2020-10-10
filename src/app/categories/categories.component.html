@@ -6,7 +6,7 @@
 			<img src="{{ category.strCategoryThumb }}" class="image">
 			<div class="overlay">
 			</div>
-			<div class="text"><a href="#" class="h2 text-light">{{ category.strCategory }}</a></div>
+			<div class="text"><a [routerLink]="['/category', category.strCategory]" class="h2 text-light">{{ category.strCategory }}</a></div>
 			<div class="inline-spacer"></div>
 		</div>
 	</div>

@@ -4,10 +4,10 @@ import { AreaService } from '../area.service';
 
 @Component({
   selector: 'app-area',
-  templateUrl: './area.component.html',
-  styleUrls: ['./area.component.css']
+  templateUrl: './areas.component.html',
+  styleUrls: ['./areas.component.css']
 })
-export class AreaComponent implements OnInit {
+export class AreasComponent implements OnInit {
 
   countryData = [
     {"Code":"AD","Country":"Andorra","ISO":53,"Nationality":"Andorian"},

@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component'
-import { CategoriesComponent } from './categories/categories.component'
-import { AreaComponent } from './area/area.component'
-import { IngredientsComponent } from './ingredients/ingredients.component'
+import { HomeComponent } from './home/home.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { AreasComponent } from './areas/areas.component';
+import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
 	{ path: '', component: HomeComponent},
 	{ path: 'categories', component: CategoriesComponent },
-	{ path: 'area', component: AreaComponent },
-	{ path: 'ingredients', component: IngredientsComponent }
+	{ path: 'areas', component: AreasComponent },
+	{ path: 'category/:category', component:CategoryComponent },
+	//For when there is no category in the url, so i can handle this in the code.
+	{ path: 'category', component:CategoryComponent }
 ];
 
 @NgModule({

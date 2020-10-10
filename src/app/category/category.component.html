@@ -1,0 +1,15 @@
+<div class="text-center mt-5">
+	<h1>{{ ChosenCategory }}</h1>
+	<div class="spacer"></div>
+	<div class="categoryContent">
+		<div class="card-columns">
+		 <div class="card" style="width: 18rem;" *ngFor="let meal of Meals">
+		 	<img src="{{ meal.strMealThumb }}" class="card-img-top">
+		 	<div class="card-body">
+		 	  <p class="card-text">{{ meal.strMeal }}</p>
+		 	  <a href="#" class="btn btn-primary">Go somewhere</a>
+		 	</div>
+		 </div>
+		</div>
+	</div>
+</div>
