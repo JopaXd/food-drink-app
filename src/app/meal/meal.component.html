@@ -1,0 +1,47 @@
+<ng-container *ngIf="meal">
+	<div class="container">
+	    <div class="row">
+	      <div class="col-lg-8">
+	        <h1 class="mt-4">{{ meal.strMeal }}</h1>
+	        <hr>
+	        <img class="img-fluid rounded" src="{{ meal.strMealThumb }}" alt="">
+	        <hr>
+	        <p class="h2">Ingredients</p>
+	        <p *ngFor="let ingredient of ingredients">{{ ingredient.ingredientName }} : {{ ingredient.ingredientMeasure }}</p>
+	        <p class="h2">Instructions</p>
+	        <p class="lead">{{ meal.strInstructions }}</p>
+	      </div>
+	      <div class="col-md-4">
+	        <div class="card my-4">
+	          <h5 class="card-header">Categories</h5>
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-6">
+	                <ul class="list-unstyled mb-0">
+	                  <li>
+	                    <a [routerLink]="['/category', meal.strCategory]">{{ meal.strCategory }}</a>
+	                  </li>
+	                  <li>
+	                  </li>
+	                </ul>
+	              </div>
+	              <div class="col-lg-6">
+	                <ul class="list-unstyled mb-0">
+	                  <li>
+	                    <a [routerLink]="['/area', meal.strArea]">{{ meal.strArea }}</a>
+	                  </li>
+	                </ul>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="card my-4" *ngIf="meal.strTags">
+	          <h5 class="card-header">Tags</h5>
+	          <div class="card-body">
+	            {{ meal.strTags }}
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+</ng-container>

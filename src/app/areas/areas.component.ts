@@ -152,6 +152,5 @@ export class AreasComponent implements OnInit {
   		   } 
   		});
   	})
-  	console.log(this.countriesList);
   }
 }

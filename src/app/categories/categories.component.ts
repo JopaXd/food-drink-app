@@ -17,8 +17,6 @@ export class CategoriesComponent implements OnInit {
   	this._titleSvc.setTitle("Food & Drink - Categories");
   	this._categoriesSvc.getAllCategories().subscribe(data => {
   		this.categories = data["categories"];
-  		console.log(this.categories[0]["strCategoryThumb"])
   	})
   }
-
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriesService } from '../categories.service'
 import { TitleService } from '../title.service';
 
@@ -13,13 +13,13 @@ export class CategoryComponent implements OnInit {
   ChosenCategory:string;
   Meals;
 
-  constructor(private route: ActivatedRoute, private _titleSvc:TitleService, private _categoriesSvc:CategoriesService) { }
+  constructor(private route: ActivatedRoute, private _titleSvc:TitleService, private _categoriesSvc:CategoriesService, private router:Router) { }
 
   ngOnInit(): void {
   	this._titleSvc.setTitle("Food & Drink - Category");
   	this.route.params.subscribe(params =>{
   		if (!params.category){
-  			window.location.href = "/";
+  			this.router.navigate(["/"]);
   			return;
   		}
   		else{
@@ -27,7 +27,7 @@ export class CategoryComponent implements OnInit {
   			this._categoriesSvc.getMealsByCategory(chosenCategory).subscribe(data => {
   				let meals = data["meals"];
   				if (!meals){
-  					window.location.href = "/categories";
+  					this.router.navigate(["/categories"]);
   					return;
   				}
   				else{

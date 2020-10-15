@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AreaService } from '../area.service';
 import { TitleService } from '../title.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-area',
@@ -13,13 +13,13 @@ export class AreaComponent implements OnInit {
   ChosenArea:string;
   Meals;
 
-  constructor(private _areaSvc:AreaService, private _titleSvc:TitleService, private route: ActivatedRoute) { }
+  constructor(private _areaSvc:AreaService, private _titleSvc:TitleService, private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
   	this._titleSvc.setTitle("Food & Drink - Area");
   	this.route.params.subscribe(params =>{
   		if (!params.area){
-  			window.location.href = "/";
+  			this.router.navigate(["/"]);
   			return;
   		}
   		else{
@@ -27,7 +27,7 @@ export class AreaComponent implements OnInit {
   			this._areaSvc.getMealsByArea(chosenArea).subscribe(data => {
   				let meals = data["meals"];
   				if (!meals){
-  					window.location.href = "/areas";
+  					 this.router.navigate(["/areas"]);
   					return;
   				}
   				else{

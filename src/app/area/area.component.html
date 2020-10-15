@@ -7,7 +7,7 @@
 		 	<img src="{{ meal.strMealThumb }}" class="card-img-top">
 		 	<div class="card-body">
 		 	  <p class="card-text">{{ meal.strMeal }}</p>
-		 	  <a href="#" class="btn btn-primary">Check Out The Recipe!</a>
+		 	  <a [routerLink]="['/meal', meal.idMeal]" class="btn btn-primary">Check Out The Recipe!</a>
 		 	</div>
 		 </div>
 		</div>
