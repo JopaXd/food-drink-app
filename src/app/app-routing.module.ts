@@ -6,6 +6,7 @@ import { AreasComponent } from './areas/areas.component';
 import { CategoryComponent } from './category/category.component';
 import { AreaComponent } from './area/area.component';
 import { MealComponent } from './meal/meal.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
 	{ path: '', component: HomeComponent},
@@ -19,7 +20,10 @@ const routes: Routes = [
 	{ path: 'area', component:AreaComponent },
 	{ path: 'meal/:meal_id', component: MealComponent},
 	//For when there is no meal id in the url, so i can handle this in the code.
-	{ path: 'meal', component: MealComponent}
+	{ path: 'meal', component: MealComponent},
+	{ path: 'search/:query', component: SearchComponent},
+	//For when there is no query in the url, so i can handle this in the code.
+	{ path: 'search', component: SearchComponent}
 ];
 
 @NgModule({

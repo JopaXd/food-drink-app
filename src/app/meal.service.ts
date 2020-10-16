@@ -11,4 +11,9 @@ export class MealService {
   getMealById(id){
   	return this.http.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
   }
+
+  //This has to be async somehow.
+  searchMeal(query){
+  	return this.http.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
+  }
 }

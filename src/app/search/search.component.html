@@ -1,0 +1,24 @@
+<ng-container *ngIf="isLoaded">
+	<ng-template [ngIf]="meals" [ngIfElse]="noResults">
+		<div class="searchResults mt-5 container">
+			<p class="h2"><strong>Search: {{ query }}</strong>
+			<p class="h3">Results: {{ meals.length }}</p>
+			<div class="spacer"></div>
+			<div class="card-columns">
+				<div class="card" style="width: 18rem;" *ngFor="let meal of meals">
+					<img src="{{ meal.strMealThumb }}" class="card-img-top">
+					<div class="card-body">
+					  <p class="card-text text-center">{{ meal.strMeal }}</p>
+					  <a [routerLink]="['/meal', meal.idMeal]" style="display:block;" class="btn btn-primary text-center">Check Out The Recipe!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ng-template>
+	<ng-template #noResults>
+		<div class="noResults mt-5 text-center">
+			<p class="h2">No meals with the name of {{ query }} found!</p>
+		</div>
+	</ng-template>
+	<div class="footerSpacer"></div>
+</ng-container>

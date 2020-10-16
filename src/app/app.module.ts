@@ -1,4 +1,5 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +15,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './category/category.component';
 import { AreaComponent } from './area/area.component';
-import { MealComponent } from './meal/meal.component'
+import { MealComponent } from './meal/meal.component';
+import { SearchComponent } from './search/search.component'
 
 @NgModule({
   declarations: [
@@ -26,14 +28,16 @@ import { MealComponent } from './meal/meal.component'
     AreasComponent,
     CategoryComponent,
     AreaComponent,
-    MealComponent
+    MealComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ Title ],
   bootstrap: [AppComponent]

@@ -18,9 +18,9 @@
          <a class="nav-link" routerLink="/areas">Browse By Area</a>
        </li>
      </ul>
-     <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search for a meal!" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-     </form>
+     <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" [(ngModel)]="query" placeholder="Search for a meal!" aria-label="Search">
+        <button (click)="search()" class="btn btn-outline-success my-2 my-sm-0" type="button"><i class="fa fa-search"></i></button>
+     </div>
    </div>
 </nav>
