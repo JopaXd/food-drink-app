@@ -16,7 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './category/category.component';
 import { AreaComponent } from './area/area.component';
 import { MealComponent } from './meal/meal.component';
-import { SearchComponent } from './search/search.component'
+import { SearchComponent } from './search/search.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContributeComponent } from './contribute/contribute.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { SearchComponent } from './search/search.component'
     CategoryComponent,
     AreaComponent,
     MealComponent,
-    SearchComponent
+    SearchComponent,
+    AboutComponent,
+    ContactComponent,
+    ContributeComponent
   ],
   imports: [
     BrowserModule,
